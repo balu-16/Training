@@ -1,64 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Employee Management System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Loan Approval System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="container">
 
-        <h1>Employee Management System</h1>
+        <h1>🏦 Bank Loan Approval System</h1>
 
         <div class="form-section">
+            <h2>Loan Application Form</h2>
 
-            <input type="text" id="empName" placeholder="Employee Name">
+            <div class="form-row">
+                <input type="text" id="applicantName" placeholder="Applicant Name">
+                <input type="number" id="applicantAge" placeholder="Age" min="18">
+            </div>
 
-            <input type="number" id="empAge" placeholder="Age">
+            <div class="form-row">
+                <select id="applicantType">
+                    <option value="">Select Applicant Type</option>
+                    <option value="Student">Student</option>
+                    <option value="Employee">Employee</option>
+                </select>
+                <input type="number" id="loanAmount" placeholder="Loan Amount (₹)" min="1000">
+            </div>
 
-            <select id="empDepartment">
-                <option value="">Select Department</option>
-                <option>HR</option>
-                <option>IT</option>
-                <option>Finance</option>
-                <option>Marketing</option>
-            </select>
+            <div class="form-row">
+                <input type="number" id="criteriaValue" placeholder="Marks (for Student) / Income (for Employee)" min="0">
+            </div>
 
-            <input type="number" id="empSalary" placeholder="Salary">
-
-            <button onclick="addEmployee()">
-                Add Employee
-            </button>
-
+            <button onclick="submitApplication()">Submit Application</button>
         </div>
 
-        <div class="search-box">
-            <input
-                type="text"
-                id="search"
-                placeholder="Search Employee..."
-                onkeyup="searchEmployee()"
-            >
+        <div class="info-box">
+            <h3>Approval Criteria</h3>
+            <p><strong>Student:</strong> Marks must be <span class="highlight">80 or above</span></p>
+            <p><strong>Employee:</strong> Income must be <span class="highlight">₹50,000 or above</span></p>
         </div>
 
-        <table>
-
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Department</th>
-                    <th>Salary</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-
-            <tbody id="employeeTable">
-
-            </tbody>
-
-        </table>
+        <div class="table-section">
+            <h2>Loan Applications</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Type</th>
+                        <th>Loan Amount</th>
+                        <th>Marks / Income</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="applicationTable">
+                </tbody>
+            </table>
+            <p id="noRecords" class="no-records">No applications submitted yet.</p>
+        </div>
 
     </div>
 

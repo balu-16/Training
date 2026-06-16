@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Employee Management System</h1>
+
+        <div class="form-section">
+
+            <input type="text" id="empName" placeholder="Employee Name">
+
+            <input type="number" id="empAge" placeholder="Age">
+
+            <select id="empDepartment">
+                <option value="">Select Department</option>
+                <option>HR</option>
+                <option>IT</option>
+                <option>Finance</option>
+                <option>Marketing</option>
+            </select>
+
+            <input type="number" id="empSalary" placeholder="Salary">
+
+            <button onclick="addEmployee()">
+                Add Employee
+            </button>
+
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="search"
+                placeholder="Search Employee..."
+                onkeyup="searchEmployee()"
+            >
+        </div>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="employeeTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
