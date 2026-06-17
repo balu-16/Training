@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Book Manager</h1>
+
+        <div class="status-box" id="statusBox">
+            Checking server status...
+        </div>
+
+        <div class="form-section">
+            <h2>Add / Edit Book</h2>
+
+            <div class="form-row">
+                <input type="text" id="bookTitle" placeholder="Book Title">
+                <input type="text" id="bookAuthor" placeholder="Author">
+            </div>
+
+            <div class="form-row">
+                <input type="text" id="bookIsbn" placeholder="ISBN">
+                <input type="number" id="bookPages" placeholder="Pages" min="1">
+            </div>
+
+            <div class="form-row">
+                <input type="text" id="bookGenre" placeholder="Genre">
+                <input type="number" id="bookYear" placeholder="Published Year" min="0">
+            </div>
+
+            <button id="submitBtn" onclick="submitBook()">Add Book</button>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search books..." onkeyup="searchBooks()">
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Pages</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookTable">
+            </tbody>
+        </table>
+
+        <p id="noRecords" class="no-records">No books added yet.</p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
