@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: Arial;
+
+  background-image: url("./assets/background.jpg");
+
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
+nav {
+  height: 70px;
+
+  background: #111;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-around;
+}
+
+nav ul {
+  display: flex;
+
+  gap: 40px;
+
+  list-style: none;
+}
+
+nav li {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+
+  background: white;
+
+  color: black;
+
+  padding: 15px;
+
+  margin-top: 20px;
+}
+
+.layout {
+  display: flex;
+}
+
+aside {
+  width: 220px;
+
+  background: #222;
+
+  color: white;
+
+  min-height: 500px;
+
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+
+  padding: 30px;
+}
+
+.hero {
+  padding: 80px;
+
+  background: white;
+
+  border-radius: 20px;
+}
+
+.hero button,
+.card button {
+  padding: 12px;
+
+  background: #007bff;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+}
+
+.search {
+  margin: 20px;
+
+  padding: 15px;
+
+  width: 300px;
+}
+
+.courses {
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+
+  padding: 20px;
+
+  width: 250px;
+
+  border-radius: 15px;
+}
+
+footer {
+  background: #111;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 20px;
+}
+
+.dark {
+  background: #111;
+
+  color: white;
+}
+
+.dark .card,
+.dark .hero {
+  background: #333;
+
+  color: white;
+}
